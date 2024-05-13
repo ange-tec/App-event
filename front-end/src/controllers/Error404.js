@@ -1,6 +1,6 @@
 const Quatre04 = class {
   constructor() {
-    this.el = document.querySelector('#root');
+    this.el = document.querySelector('#app');
 
     this.run();
   }
