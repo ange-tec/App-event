@@ -1,4 +1,4 @@
-const Quatre04 = class {
+class Error04 {
   constructor() {
     this.el = document.querySelector('#app');
 
@@ -12,6 +12,6 @@ const Quatre04 = class {
   run() {
     this.el.innerHTML = this.render();
   }
-};
+}
 
-export default Quatre04;
+export default Error04;
