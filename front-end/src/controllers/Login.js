@@ -1,3 +1,5 @@
+import axios from 'axios';
+import toastr from 'toastr';
 import LoginViews from '../views/Login-views';
 import NavViews from '../views/Nav-views';
 
@@ -15,7 +17,7 @@ const Login = class {
         ${NavViews()}
       </div>
     </nav>
-    <div class="container bd-example m-auto border mt-5 pt-5 border shadow rounded-5">
+    <div class="container bd-example m-auto border rounded mt-5 pt-5 border shadow rounded-5">
       <div class="row">${LoginViews()}</div>
     </div>
     `);
@@ -23,28 +25,44 @@ const Login = class {
 
   run() {
     this.el.innerHTML = this.render();
+    this.onClickSubmitLogin();
   }
 
-  onClickSubmitRegister() {
-    const submitR = document.querySelector('#submitRegister');
+  onClickSubmitLogin() {
+    const submitLog = document.querySelector('#submitLogin');
 
-    submitR.addEventListener('click', async (e) => {
+    submitLog.addEventListener('click', async (e) => {
       e.preventDefault();
 
       const data = {
-        email: document.querySelector('#email').value,
-        password: document.querySelector('#password').value
+        email: document.querySelector('#Email').value,
+        password: document.querySelector('#Password').value
       };
 
       await axios({
         method: 'post',
         url: 'http://localhost:3000/auth/login',
-        data:{
-          email: data['email'],
-          password: data['password']
-        }
+        data
       }).then((res) => {
-        console.log(res);
+        console.log(res.status);
+        if (res.status === 200) {
+          toastr.success('We do have the Kapua suite available.');
+
+          setTimeout(() => {
+            window.location.href = '/dashboard';
+
+            axios({
+              method: 'get',
+              url: 'http://localhost:3000/event/5'
+            }).catch((error) => {
+              console.error(error);
+            });
+          }, 1000);
+        } else if (res.status === 404) {
+          toastr.error('I do not think that word means what you think it means.');
+        } else if (res.status === 401) {
+          toastr.warning('Unauthorized.');
+        }
       }).catch((error) => {
         console.error(error);
       });

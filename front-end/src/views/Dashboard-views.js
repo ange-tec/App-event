@@ -6,10 +6,10 @@ export default () => (`
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-2 border shadow">
+        <div class="col-2">
           ${CategoriesViews()}
         </div>
-        <div class="col-10 shadow border p-2 overflow-auto">
+        <div class="col-10 shadow p-2">
           ${CardsViews()}
         </div>
       </div>

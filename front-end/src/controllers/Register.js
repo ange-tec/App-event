@@ -42,10 +42,13 @@ const Register = class {
 
       await axios({
         method: 'post',
-        url: 'http://localhost:3000/user',
+        header: ('Content-type: application/json'),
+        url: 'http://127.0.0.1:3000/user',
         data
       }).then((res) => {
-        console.log(res);
+        if (res.status === 200) {
+          window.location = '/dashboard';
+        }
       }).catch((error) => {
         console.error(error);
       });

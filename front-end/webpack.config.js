@@ -1,10 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const loader = require('sass-loader');
 
 module.exports = {
-  entry: './src/index.js', //if you unuse typescript entry
-  //entry: './src/index.ts',
+  // entry: './src/index.js' if you unuse typescript entry
+  entry: './src/index.js',
   output: {
     filename: 'src/[name].[fullhash].js',
     path: path.resolve(__dirname, 'dist')
@@ -31,12 +32,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|ico|svg)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         use: [
           {
             loader: 'file-loader',
-          },
-        ],
+          }
+        ]
       },
       { test: /\.ts$/, use: 'ts-loader' }
     ],
@@ -51,7 +52,7 @@ module.exports = {
     open: true,
     hot: true,
     client: {
-      logging: 'none',
+      logging: 'info',
       overlay: true,
       progress: true,
       webSocketTransport: 'ws'

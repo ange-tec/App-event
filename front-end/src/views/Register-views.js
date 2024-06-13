@@ -1,27 +1,64 @@
 export default () => (`
-<svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-</svg>
 <form>
-  <div class="mb-3">
-    <label for="name" class="form-label"></label>
-    <input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Name">
+  <!-- 2 column grid layout with text inputs for the first and last names -->
+  <div class="row mb-4">
+    <div class="col">
+      <div data-mdb-input-init class="form-outline">
+        <input type="text" id="firstname" class="form-control" placeholder="First Name" required/>
+        <label class="form-label" for="form3Example1"></label>
+      </div>
+    </div>
+    <div class="col">
+      <div data-mdb-input-init class="form-outline">
+        <input type="text" id="name" class="form-control" placeholder="Name" required/>
+        <label class="form-label" for="form3Example2"></label>
+      </div>
+    </div>
   </div>
-  <div class="mb-3">
-    <label for="firstname" class="form-label"></label>
-    <input type="firstname" class="form-control" id="firstname" aria-describedby="firstname" placeholder="Firstname">
+
+  <!-- Email input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="email" id="email" class="form-control" placeholder="Email address" required/>
+    <label class="form-label" for="form3Example3"></label>
   </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label"></label>
-    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="E-mail" required>
+
+  <!-- Password input -->
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="password" id="password" class="form-control" placeholder="Password" required/>
+    <label class="form-label" for="form3Example4"></label>
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label"></label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
+
+  <!-- Checkbox -->
+  <div class="form-check d-flex justify-content-center mb-4">
+    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked/>
+    <label class="form-check-label" for="form2Example33">
+      Subscribe to our newsletter
+    </label>
   </div>
-  <div class="text-center mt-4 mb-4">
-    <a id="submitRegister" class="btn btn-primary">Confirmer</a>
+
+  <!-- Submit button -->
+  <div class="d-flex justify-content-center">
+    <a href="#" id="submitRegister" data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">Sign up</a>
+  </div>
+
+  <!-- Register buttons -->
+  <div class="text-center pb-3">
+    <p>or sign up with:</p>
+    <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-facebook-f"></i>
+    </button>
+
+    <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-google"></i>
+    </button>
+
+    <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-twitter"></i>
+    </button>
+
+    <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+      <i class="fab fa-github"></i>
+    </button>
   </div>
 </form>
 `);
