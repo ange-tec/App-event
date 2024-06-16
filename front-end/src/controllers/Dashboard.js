@@ -51,7 +51,7 @@ const Dashboard = class {
               <a href="/readmore" class="btn btn-secondary">Découvrir</a>
             </div>
             <div class="link-2">
-              <a href="/edit" class="btn btn-secondary"> Editer </a>
+              <a href="/edit" id="Edit" class="btn btn-secondary"> Editer </a>
             </div>
           </div>
         </div>

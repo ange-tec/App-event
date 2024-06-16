@@ -51,7 +51,6 @@ class Create {
         image: document.querySelector('#image').value,
         detail: document.querySelector('#detail').value,
         description: document.querySelector('#description').value,
-        date: document.querySelector('#date').value,
         category_id: selectedCheckBoxes.toString()
       };
 

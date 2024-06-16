@@ -9,65 +9,60 @@ export default () => (`
       </div>
     </div>
 
-  <!-- Date input -->
-  <div data-mdb-input-init class="form-outline mb-4">
-    <input id="date" type="date" value="2017-06-01" class="form-control m/>
-    <label class="form-label" for="form6Example3"></label>
-  </div>
+    <!-- Uploader images-->
+    <div class=""selection>
+      <label for="url" class="form-label">Entrez l'url ici</label>
+      <input class="form-control" name="url" id="image" type="url" id="formFileMultiple" pattern="https://.*" required/>
+    </div>
 
-  <!-- Uploader images-->
-  <div class=""selection>
-    <label for="url" class="form-label">Entrez l'url ici</label>
-    <input class="form-control" name="url" id="image" type="url" id="formFileMultiple" pattern="https://.*" required/>
-  </div>
-
-  <!-- Message input -->
-  <div data-mdb-input-init class="form-outline m-2 p-2">
-    <label class="form-label" for="form6Example7">Description</label>
-    <textarea class="form-control" id="description" rows="4"></textarea>
-  </div>
+    <!-- Message input -->
+    <div data-mdb-input-init class="form-outline m-2 p-2">
+      <label class="form-label" for="form6Example7">Description</label>
+      <textarea class="form-control" id="description" rows="4"></textarea>
+    </div>
   
-  <!-- Check boox-->
-  <h6>Categories</h6>
-  <div class="container-fluid border p-2 mb-4">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="1" id="category">
-      <label class="form-check-label" for="flexRadioDefault1">
-        Sport
-      </label>  
+    <!-- Check boox-->
+    <h6>Categories</h6>
+    <div class="container-fluid id="divCategory" border p-2 mb-4">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="1" id="category">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Sport
+        </label>  
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="2" id="category">
+        <label class="form-check-label" for="flexRadioDefault2">
+          Art
+        </label>                            
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="3" id="category" checked>
+        <label class="form-check-label" for="flexRadioDefault3">
+          Tourisme
+        </label>                            
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="4" id="category" checked>
+        <label class="form-check-label" for="flexRadioDefault4">
+        Egaming
+        </label>
+      </div>
+
     </div>
 
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="2" id="category">
-      <label class="form-check-label" for="flexRadioDefault2">
-        Art
-      </label>                            
-    </div>
+    <!-- Submit button -->
+    <div class="edit-buttons d-flex justify-content-evenly">
+      <div class="confirm">
+        <a href="#" data-mdb-ripple-init type="button" id="submitCreateConf" class="btn btn-primary btn-block mb-4">Confirmer</a>
+      </div>
 
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="3" id="category" checked>
-      <label class="form-check-label" for="flexRadioDefault3">
-        Tourisme
-      </label>                            
-    </div>
-
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="4" id="category" checked>
-      <label class="form-check-label" for="flexRadioDefault4">
-      Egaming
-      </label>
-    </div>
-
-  </div>
-
-  <!-- Submit button -->
-  <div class="edit-buttons d-flex justify-content-evenly">
-    <div class="confirm">
-      <a href="#" data-mdb-ripple-init type="button" id="submitCreateConf" class="btn btn-primary btn-block mb-4">Confirmer</a>
-    </div>
-
-    <div class="delete">
-      <a href="#" data-mdb-ripple-init type="button" id="submitCreateSup" class="btn btn-danger btn-block mb-4">Supprimer</a>
+      <div class="delete">
+        <a href="#" data-mdb-ripple-init type="button" id="submitCreateSup" class="btn btn-danger btn-block mb-4">Supprimer</a>
+      </div>
     </div>
   </div>
 </form>

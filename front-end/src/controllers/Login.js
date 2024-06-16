@@ -50,13 +50,6 @@ const Login = class {
 
           setTimeout(() => {
             window.location.href = '/dashboard';
-
-            axios({
-              method: 'get',
-              url: 'http://localhost:3000/event/5'
-            }).catch((error) => {
-              console.error(error);
-            });
           }, 1000);
         } else if (res.status === 404) {
           toastr.error('I do not think that word means what you think it means.');

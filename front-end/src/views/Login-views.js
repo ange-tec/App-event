@@ -38,22 +38,6 @@ export default () => (`
   <!-- Register buttons -->
   <div class="text-center justify-content-evenly pb-3">
     <p>Not a member? <a href="/register">Register</a></p>
-    <p>or sign up with:</p>
-    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
-      <i class="fab fa-facebook-f"></i>
-    </button>
-
-    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
-      <i class="fab fa-google"></i>
-    </button>
-
-    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
-      <i class="fab fa-twitter"></i>
-    </button>
-
-    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
-      <i class="fab fa-github"></i>
-    </button>
   </div>
 </form>
 `);
